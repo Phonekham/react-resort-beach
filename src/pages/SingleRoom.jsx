@@ -19,12 +19,35 @@ export default class SingleRoom extends Component {
   render() {
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
-    console.log(room);
-
+    if (!room) {
+      return (
+        <div className="error">
+          <h3>No room could found...</h3>
+          <Link to="/rooms" className="btn-primary">
+            Back to Rooms
+          </Link>
+        </div>
+      );
+    }
+    const {
+      name,
+      description,
+      capacity,
+      size,
+      price,
+      extras,
+      breakfast,
+      pets,
+      images
+    } = room;
     return (
-      <div>
-        <h3>sigle room</h3>
-      </div>
+      <Hero hero="roomsHero">
+        <Banner title={`${name} room`}>
+          <Link to="/rooms" className="btn-primary">
+            Back To Rooms
+          </Link>
+        </Banner>
+      </Hero>
     );
   }
 }
