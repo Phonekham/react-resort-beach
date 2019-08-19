@@ -2,7 +2,7 @@
   "name": "react-resort-beach",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://phonekham.github.io/react-resort-beach",
+  "homepage": "https://phonekham.github.io/react-resort-beach/",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
