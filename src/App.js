@@ -19,6 +19,17 @@ function App() {
         <Route path="/rooms/:slug" exact component={SingleRoom} />
         <Route component={Error} />
       </Switch>
+      <footer>
+        {" "}
+        <div className="footer-copyright text-center py-3">
+          <span style={{ color: "lightblue" }}>
+            {" "}
+            <i className="fas fa-code" />
+          </span>{" "}
+          with <span style={{ color: "red" }}>❤</span> By:
+          <a href="https://web.facebook.com/cr7.westlife"> Phonekham</a>
+        </div>
+      </footer>
     </>
   );
 }
